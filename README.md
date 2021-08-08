@@ -109,7 +109,7 @@ B의 공개키로 잠궈서 보내면 해커가 중간에 메시지를 삭제 �
 열리면 B의 개인키로 열어서 메시지를 확인한다.
 ```
 
-##4. JWT(Json Web Token)
+#4. JWT(Json Web Token)
 ```
      1. client에서 server로 로그인을 할때 id, pw를 server로 보내준다.
      2. 기존의 로그인 요청시에는 session을 만들었지만 JWT를 사용하면 token을 만들어준다.
