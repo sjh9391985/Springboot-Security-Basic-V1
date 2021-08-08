@@ -1,7 +1,9 @@
 package com.cos.security01.model;
 
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.Entity;
@@ -12,7 +14,8 @@ import java.sql.Timestamp;
 
 @Data
 @Entity
-public class User {
+@NoArgsConstructor
+public class User{
     @Id // primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -26,4 +29,16 @@ public class User {
 
     @CreationTimestamp
     private Timestamp createDate;
+
+
+    @Builder
+    public User(String username, String password, String email, String role, String provider, String providerId, Timestamp createDate) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.role = role;
+        this.provider = provider;
+        this.providerId = providerId;
+        this.createDate = createDate;
+    }
 }
